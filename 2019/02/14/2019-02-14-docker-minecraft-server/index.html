@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 4.0.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+
+
+<script id="hexo-configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '7.4.2',
+    exturl: false,
+    sidebar: {"position":"left","display":"post","offset":12,"onmobile":false},
+    copycode: {"enable":false,"show_result":false,"style":null},
+    back2top: {"enable":true,"sidebar":false,"scrollpercent":false},
+    bookmark: {"enable":false,"color":"#222","save":"auto"},
+    fancybox: false,
+    mediumzoom: false,
+    lazyload: false,
+    pangu: false,
+    algolia: {
+      appID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    },
+    localsearch: {"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},
+    path: '',
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    translation: {
+      copy_button: 'Copiar',
+      copy_success: 'Copiado',
+      copy_failure: 'Copiar falló'
+    },
+    sidebarPadding: 40
+  };
+</script>
+
+  <meta name="description" content="En este post voy a mostrar una imagen docker para levantar un servidor de minecraft de manera fácil y curiosa si eres un entusiasta docker; si no sabes y tienes interés en la tecnología docker, tienes">
+<meta property="og:type" content="article">
+<meta property="og:title" content="[Presentando] Imagen docker para servidor minecraft">
+<meta property="og:url" content="https:&#x2F;&#x2F;blog.esturafd.me&#x2F;2019&#x2F;02&#x2F;14&#x2F;2019-02-14-docker-minecraft-server&#x2F;index.html">
+<meta property="og:site_name" content="El stream del este">
+<meta property="og:description" content="En este post voy a mostrar una imagen docker para levantar un servidor de minecraft de manera fácil y curiosa si eres un entusiasta docker; si no sabes y tienes interés en la tecnología docker, tienes">
+<meta property="og:locale" content="es">
+<meta property="og:image" content="https:&#x2F;&#x2F;www.docker.com&#x2F;sites&#x2F;default&#x2F;files&#x2F;social&#x2F;docker_facebook_share.png">
+<meta property="og:updated_time" content="2019-11-18T17:56:29.083Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https:&#x2F;&#x2F;www.docker.com&#x2F;sites&#x2F;default&#x2F;files&#x2F;social&#x2F;docker_facebook_share.png">
+
+<link rel="canonical" href="https://blog.esturafd.me/2019/02/14/2019-02-14-docker-minecraft-server/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome: false,
+    isPost: true,
+    isPage: false,
+    isArchive: false
+  };
+</script>
+
+  <title>[Presentando] Imagen docker para servidor minecraft | El stream del este</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-meta">
+
+    <div>
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">El stream del este</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+        <p class="site-subtitle">blog de apuntes de tecnología</p>
+  </div>
+
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Cambiar a barra de navegación">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+</div>
+
+
+<nav class="site-nav">
+  
+  <ul id="menu" class="menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-fw fa-home"></i>Inicio</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>Archivo</a>
+
+  </li>
+  </ul>
+
+</nav>
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content">
+            
+
+  <div class="posts-expand">
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="es">
+    <link itemprop="mainEntityOfPage" href="https://blog.esturafd.me/2019/02/14/2019-02-14-docker-minecraft-server/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/revolution-desu.jpg">
+      <meta itemprop="name" content="esturafd">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="El stream del este">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          [Presentando] Imagen docker para servidor minecraft
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">Publicado el</span>
+
+              <time title="Creado por: 2019-02-14 16:07:04" itemprop="dateCreated datePublished" datetime="2019-02-14T16:07:04-06:00">2019-02-14</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">Editado el</span>
+                <time title="Modificado por: 2019-11-18 11:56:29" itemprop="dateModified" datetime="2019-11-18T11:56:29-06:00">2019-11-18</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">En</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/docker/" itemprop="url" rel="index">
+                    <span itemprop="name">docker</span>
+                  </a>
+                </span>
+                  , 
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/docker/minecraft/" itemprop="url" rel="index">
+                    <span itemprop="name">minecraft</span>
+                  </a>
+                </span>
+                  , 
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/docker/minecraft/server/" itemprop="url" rel="index">
+                    <span itemprop="name">server</span>
+                  </a>
+                </span>
+                  , 
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/docker/minecraft/server/servidor/" itemprop="url" rel="index">
+                    <span itemprop="name">servidor</span>
+                  </a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p>En este post voy a mostrar una <a href="https://github.com/streameast/docker-minecraft-server" target="_blank" rel="noopener">imagen</a>
+docker para levantar un servidor de minecraft de manera fácil y curiosa si eres
+un entusiasta docker; si no sabes y tienes interés en la tecnología docker, tienes
+mas información <a href="https://www.youtube.com/watch?v=hQgvt-s-AHQ" target="_blank" rel="noopener">aquí</a>.</p>
+<p><img src="https://www.docker.com/sites/default/files/social/docker_facebook_share.png" alt="docker"></p>
+<p>Desde hace algún tiempo eh tenido la armonía de jugar algo en cooperativo con los
+amigos, montar un servidor, reunirnos un poco de pizza y darle a jugar, pero no nos
+decidíamos que juego poner.</p>
+<p>Después de pensarlo un poco llegamos a minecraft, un juego que ya todos hemos jugado,
+pero normalmente solos y que definitivamente le añade un toque especial jugar con
+otros y la ventaja de que es multiplataforma, ya que no todos tienen Windows en su PC.</p>
+<p>Creo que vi alguna imagen ya existente para este mismo propósito, pero tenia unas
+ganas por compilar mi propia imagen así que decidí hacerlo de esa manera.</p>
+<h2 id="Construccion-y-uso"><a href="#Construccion-y-uso" class="headerlink" title="Construcción y uso"></a>Construcción y uso</h2><p>Por motivos de la licencia de minecraft no esta en docker-hub, por lo que se compila
+manualmente, pero esto es relativamente sencillo.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">clone</span> https://github.com/streameast/docker-minecraft-server.git</span><br><span class="line"><span class="built_in">cd</span> docker-minecraft-server</span><br><span class="line">docker build -t streameast/minecraft-server .</span><br><span class="line">docker run -d -p 25565:25565 streameast/minecraft-server</span><br></pre></td></tr></table></figure>
+
+<h2 id="Curiosidades"><a href="#Curiosidades" class="headerlink" title="Curiosidades"></a>Curiosidades</h2><p>Durante la ejecución en el servidor donde finalmente esta el servidor me di cuenta
+de algo, esta computadora tiene apenas 1GB de RAM y la memoria recomendada por Mojang
+es igualmente de 1GB de RAM exclusiva para la aplicación, por lo que no había suficiente
+para ejecutarlo.</p>
+<p>Debido a esto se crearon las variables MINECRAFT_XMX y MINECRAFT_XMS que manejan la
+memoria asignada a la aplicación, volví a ejecutar la imagen asignando 512M a las
+dos variables y funciono muy bien, el consumo se mantiene por los 700MB.</p>
+<p>Mas información en la pagina del <a href="https://github.com/streameast/docker-minecraft-server" target="_blank" rel="noopener">proyecto</a>.</p>
+
+    </div>
+
+    
+    
+    
+        
+
+<div>
+<ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>Autor de la entrada:  </strong>@streameast
+  </li>
+  <li class="post-copyright-link">
+    <strong>Enlace a la entrada: </strong>
+    <a href="https://blog.esturafd.me/2019/02/14/2019-02-14-docker-minecraft-server/" title="[Presentando] Imagen docker para servidor minecraft">https://blog.esturafd.me/2019/02/14/2019-02-14-docker-minecraft-server/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>Copyright:  </strong>Todos los artículos de este blog están licenciados bajo <a href="https://creativecommons.org/licenses/by-sa/4.0/es" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i>BY-SA</a> a no ser que se especifique una licencia adicional.
+  </li>
+</ul>
+</div>
+
+
+      <footer class="post-footer">
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-next post-nav-item">
+                <a href="/2019/01/04/2019-01-04-https-githubpages/" rel="next" title="[Presentando] HTTPS en GitHub Pages">
+                  <i class="fa fa-chevron-left"></i> [Presentando] HTTPS en GitHub Pages
+                </a>
+            </div>
+
+            <span class="post-nav-divider"></span>
+
+            <div class="post-nav-prev post-nav-item">
+            </div>
+          </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+  </div>
+
+
+          </div>
+          
+    <div class="comments" id="gitalk-container"></div>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          Tabla de contenidos
+        </li>
+        <li class="sidebar-nav-overview">
+          Inicio
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Construccion-y-uso"><span class="nav-number">1.</span> <span class="nav-text">Construcción y uso</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Curiosidades"><span class="nav-number">2.</span> <span class="nav-text">Curiosidades</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <img class="site-author-image" itemprop="image" alt="esturafd"
+    src="/images/revolution-desu.jpg">
+  <p class="site-author-name" itemprop="name">esturafd</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">5</span>
+          <span class="site-state-item-name">entradas</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+        <span class="site-state-item-count">16</span>
+        <span class="site-state-item-name">categorías</span>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://github.com/esturafd" title="GitHub &amp;rarr; https:&#x2F;&#x2F;github.com&#x2F;esturafd" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i></a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://twitter.com/esturafd" title="Twitter &amp;rarr; https:&#x2F;&#x2F;twitter.com&#x2F;esturafd" rel="noopener" target="_blank"><i class="fa fa-fw fa-twitter"></i></a>
+      </span>
+  </div>
+  <div class="cc-license motion-element" itemprop="license">
+    <a href="https://creativecommons.org/licenses/by-sa/4.0/es" class="cc-opacity" rel="noopener" target="_blank"><img src="/images/cc-by-sa.svg" alt="Creative Commons"></a>
+  </div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">esturafd</span>
+</div>
+  <div class="powered-by">Creado mediante <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> v4.0.0
+  </div>
+  <span class="post-meta-divider">|</span>
+  <div class="theme-info">Tema – <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> v7.4.2
+  </div>
+
+        
+
+
+
+
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+<script src="/js/utils.js"></script><script src="/js/motion.js"></script>
+<script src="/js/schemes/pisces.js"></script>
+<script src="/js/next-boot.js"></script>
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.css">
+
+<script>
+  NexT.utils.getScript('//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js', () => {
+    var gitalk = new Gitalk({
+      clientID: '063cf7ac32f1ec4aac72',
+      clientSecret: '273f1ce4357456e3747de04b605518a88fc17e16',
+      repo: 'el-stream-del-este',
+      owner: 'esturafd',
+      admin: ['esturafd'],
+      id: '7684cb0fe41f0b56f81b01dade833021',
+        language: 'es-ES',
+      distractionFreeMode: 'true'
+    });
+    gitalk.render('gitalk-container');
+  }, window.Gitalk);
+</script>
+
+</body>
+</html>
