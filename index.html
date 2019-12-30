@@ -1,0 +1,998 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 4.0.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+
+
+<script id="hexo-configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '7.4.2',
+    exturl: false,
+    sidebar: {"position":"left","display":"post","offset":12,"onmobile":false},
+    copycode: {"enable":false,"show_result":false,"style":null},
+    back2top: {"enable":true,"sidebar":false,"scrollpercent":false},
+    bookmark: {"enable":false,"color":"#222","save":"auto"},
+    fancybox: false,
+    mediumzoom: false,
+    lazyload: false,
+    pangu: false,
+    algolia: {
+      appID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    },
+    localsearch: {"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},
+    path: '',
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    translation: {
+      copy_button: 'Copiar',
+      copy_success: 'Copiado',
+      copy_failure: 'Copiar falló'
+    },
+    sidebarPadding: 40
+  };
+</script>
+
+  <meta property="og:type" content="website">
+<meta property="og:title" content="El stream del este">
+<meta property="og:url" content="https:&#x2F;&#x2F;blog.esturafd.me&#x2F;index.html">
+<meta property="og:site_name" content="El stream del este">
+<meta property="og:locale" content="es">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="https://blog.esturafd.me/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome: true,
+    isPost: false,
+    isPage: false,
+    isArchive: false
+  };
+</script>
+
+  <title>El stream del este</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-meta">
+
+    <div>
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">El stream del este</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+        <p class="site-subtitle">blog de apuntes de tecnología</p>
+  </div>
+
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Cambiar a barra de navegación">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+</div>
+
+
+<nav class="site-nav">
+  
+  <ul id="menu" class="menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-fw fa-home"></i>Inicio</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>Archivo</a>
+
+  </li>
+  </ul>
+
+</nav>
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content">
+            
+
+  <div class="posts-expand">
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="es">
+    <link itemprop="mainEntityOfPage" href="https://blog.esturafd.me/2019/02/14/2019-02-14-docker-minecraft-server/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/revolution-desu.jpg">
+      <meta itemprop="name" content="esturafd">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="El stream del este">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/2019/02/14/2019-02-14-docker-minecraft-server/" class="post-title-link" itemprop="url">[Presentando] Imagen docker para servidor minecraft</a>
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">Publicado el</span>
+
+              <time title="Creado por: 2019-02-14 16:07:04" itemprop="dateCreated datePublished" datetime="2019-02-14T16:07:04-06:00">2019-02-14</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">Editado el</span>
+                <time title="Modificado por: 2019-12-30 13:50:24" itemprop="dateModified" datetime="2019-12-30T13:50:24-06:00">2019-12-30</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">En</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/docker/" itemprop="url" rel="index">
+                    <span itemprop="name">docker</span>
+                  </a>
+                </span>
+                  , 
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/docker/minecraft/" itemprop="url" rel="index">
+                    <span itemprop="name">minecraft</span>
+                  </a>
+                </span>
+                  , 
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/docker/minecraft/server/" itemprop="url" rel="index">
+                    <span itemprop="name">server</span>
+                  </a>
+                </span>
+                  , 
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/docker/minecraft/server/servidor/" itemprop="url" rel="index">
+                    <span itemprop="name">servidor</span>
+                  </a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>En este post voy a mostrar una <a href="https://github.com/streameast/docker-minecraft-server" target="_blank" rel="noopener">imagen</a>
+docker para levantar un servidor de minecraft de manera fácil y curiosa si eres
+un entusiasta docker; si no sabes y tienes interés en la tecnología docker, tienes
+mas información <a href="https://www.youtube.com/watch?v=hQgvt-s-AHQ" target="_blank" rel="noopener">aquí</a>.</p>
+<p><img src="https://www.docker.com/sites/default/files/social/docker_facebook_share.png" alt="docker"></p>
+<p>Desde hace algún tiempo eh tenido la armonía de jugar algo en cooperativo con los
+amigos, montar un servidor, reunirnos un poco de pizza y darle a jugar, pero no nos
+decidíamos que juego poner.</p>
+<p>Después de pensarlo un poco llegamos a minecraft, un juego que ya todos hemos jugado,
+pero normalmente solos y que definitivamente le añade un toque especial jugar con
+otros y la ventaja de que es multiplataforma, ya que no todos tienen Windows en su PC.</p>
+<p>Creo que vi alguna imagen ya existente para este mismo propósito, pero tenia unas
+ganas por compilar mi propia imagen así que decidí hacerlo de esa manera.</p>
+<h2 id="Construccion-y-uso"><a href="#Construccion-y-uso" class="headerlink" title="Construcción y uso"></a>Construcción y uso</h2><h3 id="Compilar-imagen"><a href="#Compilar-imagen" class="headerlink" title="Compilar imagen"></a>Compilar imagen</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">clone</span> https://github.com/esturafd/docker-minecraft-server.git</span><br><span class="line"><span class="built_in">cd</span> docker-minecraft-server</span><br><span class="line">docker build -t esturafd/minecraft-server .</span><br></pre></td></tr></table></figure>
+
+<h3 id="Arranque"><a href="#Arranque" class="headerlink" title="Arranque"></a>Arranque</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker run -d -p 25565:25565 esturafd/minecraft-server</span><br></pre></td></tr></table></figure>
+<p>Nota: en una versión anterior de este mismo post, mencione que no se había subido a 
+docker-hub por motivos de la licencia, pero esto cambio, ya que el software de 
+servidor se descarga al momento de arrancar el server y no al compilar la imagen 
+como estaba anteriormente. Solo tomar en cuenta que descargar y ejecutar la imagen 
+da por sentado que aceptas los términos y condiciones del software de Mojang.</p>
+<h2 id="Curiosidades"><a href="#Curiosidades" class="headerlink" title="Curiosidades"></a>Curiosidades</h2><p>Durante la ejecución en el servidor donde finalmente esta el servidor me di cuenta
+de algo, esta computadora tiene apenas 1GB de RAM y la memoria recomendada por Mojang
+es igualmente de 1GB de RAM exclusiva para la aplicación, por lo que no había suficiente
+para ejecutarlo.</p>
+<p>Debido a esto se crearon las variables MINECRAFT_XMX y MINECRAFT_XMS que manejan la
+memoria asignada a la aplicación, volví a ejecutar la imagen asignando 512M a las
+dos variables y funciono muy bien, el consumo se mantiene por los 700MB.</p>
+<p>Mas información en la pagina del <a href="https://github.com/streameast/docker-minecraft-server" target="_blank" rel="noopener">proyecto</a>.</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="es">
+    <link itemprop="mainEntityOfPage" href="https://blog.esturafd.me/2019/01/04/2019-01-04-https-githubpages/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/revolution-desu.jpg">
+      <meta itemprop="name" content="esturafd">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="El stream del este">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/2019/01/04/2019-01-04-https-githubpages/" class="post-title-link" itemprop="url">[Presentando] HTTPS en GitHub Pages</a>
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">Publicado el</span>
+
+              <time title="Creado por: 2019-01-04 21:13:19" itemprop="dateCreated datePublished" datetime="2019-01-04T21:13:19-06:00">2019-01-04</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">Editado el</span>
+                <time title="Modificado por: 2019-11-18 11:56:29" itemprop="dateModified" datetime="2019-11-18T11:56:29-06:00">2019-11-18</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">En</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/https/" itemprop="url" rel="index">
+                    <span itemprop="name">https</span>
+                  </a>
+                </span>
+                  , 
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/https/ssl/" itemprop="url" rel="index">
+                    <span itemprop="name">ssl</span>
+                  </a>
+                </span>
+                  , 
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/https/ssl/github-pages/" itemprop="url" rel="index">
+                    <span itemprop="name">github-pages</span>
+                  </a>
+                </span>
+                  , 
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/https/ssl/github-pages/free/" itemprop="url" rel="index">
+                    <span itemprop="name">free</span>
+                  </a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>En este tiempo que tu sitio en internet tenga compatibilidad con https es muy
+necesario, pero para los estudiantes o para los que no tienen experiencia se pueden
+preguntar que opciones hay y si hay alguna gratuita.</p>
+<p>Por defecto si tienes un dominio <code>*.github.io</code>, este ya tiene compatibilidad con
+https, y si quieres que se use por defecto hay un configuración en la pestaña
+settings de tu repositorio. Pero para los dominios personalizados es otra historia.</p>
+<p>Si estas interesado en configurar tu dominio personalizado para GitHub Pages pero
+no sabes como, te dejo el <a href="https://help.github.com/articles/quick-start-setting-up-a-custom-domain/" target="_blank" rel="noopener">link</a>
+a la ayuda de GitHub.</p>
+<h2 id="Cloudflare"><a href="#Cloudflare" class="headerlink" title="Cloudflare"></a>Cloudflare</h2><p>Es un empresa que proporciona una red de entrega de contenido, servicios de seguridad
+de Internet y servicios de servidores de nombres de dominio distribuidos, localizados
+entre el visitante.</p>
+<p>En un principio estaba confundido creía que Cloudflare era un gestor de dominios
+por lo que creí que necesitaba que comprar otro dominio o algo, pero esta empresa
+lo que ofrece es un servicio de DNS ademas de una realizar una funciona de proxy y
+protegerte de por ejemplo ataques de DDoS, entre otras cosas.</p>
+<p>Pero el servicio de DNS ya lo realiza el gestor de dominios, eso no importa por que
+normalmente te deja configurar uno personalizado, un servername que proporciona
+este servicio.</p>
+<h2 id="Configuracion-en-Cloudflare"><a href="#Configuracion-en-Cloudflare" class="headerlink" title="Configuracion en Cloudflare"></a>Configuracion en Cloudflare</h2><ul>
+<li>Primero necesitamos registrarnos en la pagina de Cloudflare. Para esto hay un
+menu para colocar nuestro correo electrónico y una contraseña.</li>
+</ul>
+<p><img src="https://i.ibb.co/DkVfnDt/image.png" alt="https://ibb.co/q9yYwMd"></p>
+<ul>
+<li>luego registramos el dominio, en la esquina superior derecha aparece “Add site”,
+y agregamos nuestro dominio.</li>
+</ul>
+<p><img src="https://i.ibb.co/R243MtC/image.png" alt="https://ibb.co/Tcq4nJH"></p>
+<ul>
+<li><p>Al realizar esto importara nuestra configuración de DNS actual, nos pondrá un
+menú por si queremos cambiar una configuración, si no es el caso, continuamos.</p>
+</li>
+<li><p>Hasta este punto aun no sabe si el dominio es nuestro, pero esto es facil, solo
+falta cambiar los servername del servicio de DNS en nuestro gestor de dominio. En
+mi caso es NameCheap pero deberia servir para cualquiera.</p>
+</li>
+</ul>
+<p><img src="https://i.ibb.co/jTshQM1/image.png" alt="https://ibb.co/Qft9TN1"></p>
+<ul>
+<li>En Cloudflare, en la opción Crypto se coloca Full, esto hará que el certificado
+se cree (esto puede tarda un tiempo).</li>
+</ul>
+<p><img src="https://i.ibb.co/3mTzbnG/image.png" alt="https://ibb.co/jk8RYSB"></p>
+<p>Listo ya esta configurado, adicional podemos agregar una regla de pagina para
+obligar a usar solamente https. Esto lo hacemos en la opcion “Page Rules”, “create
+Page Rule”, colocamos <code>http://*midomin.io/*</code> (el primer asterisco para que aplique
+a todos los subdominios y el segudo a todas las paginas de ese dominio) y añadimos
+la configuración (Add a Setting) “Always Use HTTPS”.</p>
+<p>Revisa las referencias a recursos en tu pagina, el cambio puede dar algunos problemas.
+En mi caso tenia algunas referencia absolutas, pero al cambiarlas a relativas y se
+solucionaron.</p>
+<p>¿Cual es tu excusa para con colocar https a tu sitio?</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="es">
+    <link itemprop="mainEntityOfPage" href="https://blog.esturafd.me/2017/07/21/2017-07-21-codenvy/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/revolution-desu.jpg">
+      <meta itemprop="name" content="esturafd">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="El stream del este">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/2017/07/21/2017-07-21-codenvy/" class="post-title-link" itemprop="url">[Presentando] Codenvy</a>
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">Publicado el</span>
+
+              <time title="Creado por: 2017-07-21 20:49:42" itemprop="dateCreated datePublished" datetime="2017-07-21T20:49:42-06:00">2017-07-21</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">Editado el</span>
+                <time title="Modificado por: 2019-11-18 11:56:29" itemprop="dateModified" datetime="2019-11-18T11:56:29-06:00">2019-11-18</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">En</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/codenvy/" itemprop="url" rel="index">
+                    <span itemprop="name">codenvy</span>
+                  </a>
+                </span>
+                  , 
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/codenvy/docker/" itemprop="url" rel="index">
+                    <span itemprop="name">docker</span>
+                  </a>
+                </span>
+                  , 
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/codenvy/docker/ide/" itemprop="url" rel="index">
+                    <span itemprop="name">ide</span>
+                  </a>
+                </span>
+                  , 
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/codenvy/docker/ide/nube/" itemprop="url" rel="index">
+                    <span itemprop="name">nube</span>
+                  </a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>La semana pasada, en la Universidad nos comentaba un catedrático que por una
+u otra razón las computadoras que habían para trabajar, se des configuraban
+y que cada día que se quiera volver a usar, en este caso el IDE NetBeans, había
+que volverlo a instalar, por lo que pregunto si alguno sabía que una herramienta
+en la nube que podía solucionar este problema, lo que me llevo a encontrar
+<a href="https://codenvy.com" target="_blank" rel="noopener">Codenvy</a>.</p>
+<h2 id="¿-Que-es-Codeny"><a href="#¿-Que-es-Codeny" class="headerlink" title="¿ Que es Codeny ?"></a>¿ Que es Codeny ?</h2><p>Codenvy es un entorno en la nube, con herramientas como un IDE Web y opciones
+para levantar un contenedor docker para usarlo como workspace, incluso
+tiene la opción de que más de un desarrollador pueda trabajar con una misma
+workspace, además de otras variadas funciones.</p>
+<h2 id="Creando-una-cuenta"><a href="#Creando-una-cuenta" class="headerlink" title="Creando una cuenta"></a>Creando una cuenta</h2><p>La creación de la cuenta no es muy distinta a la de otros productos en la nube
+pero algo que me sorprendió es que se puede crear por medio de OAuth con una
+cuenta de GitHub, pasando varios datos que está ya posee a Codenvy, por
+ejemplo la llave publica que crea GitHub.</p>
+<p><img src="https://preview.ibb.co/gBsMKk/create_codenvy.png" alt="create-codenvy"></p>
+<h2 id="Creando-una-workspace"><a href="#Creando-una-workspace" class="headerlink" title="Creando una workspace"></a>Creando una workspace</h2><p>Hasta donde eh leído Codenvy ofrece de forma gratuita 3GB de RAM y por defecto
+los habientes van pesando alrededor de 2 o 3 GB por lo que está bien para
+ejecutar un solo ambiente.</p>
+<p>Una vez conscientes de lo anterior creamos una nueva workspace, lo primero que
+pide es el nombre y team, el nombre puede ser el que prefieras, en mi caso le
+puse “java-prueba” y el team solo te deja escoger personal.</p>
+<p><img src="https://preview.ibb.co/frGyFQ/nombre_workspace_codenvy.png" alt="nombre-workspace-codenvy"></p>
+<p>Luego te pide escoger el stack, la cual se escoge dependiendo de lo que vallas
+a desarrollar, en mi caso escogí la más pesada, de manera de prueba, la cual
+tiene un entorno con Java y MySQL, pero puedes encontrar para PHP, Python,
+Node, Go, etc</p>
+<p><img src="https://preview.ibb.co/ccbLUk/stack_workspace_codenvy.png" alt="stack-workspace-codenvy"></p>
+<p>Finalmente le puedes modificar RAM y agregar algún proyecto, ya sea nuevo
+o existente, el cual lo puedes importar desde varios lugares pero el que
+más me llamo la atención fue desde GitHub, La propia plataforma de Codenvy
+tiene una cuenta en GitHub con varios ejemplos que pueden ser interesantes.</p>
+<p><img src="https://preview.ibb.co/fLD0Uk/ram_workspace_codenvy.png" alt="ram-workspace-codenvy"></p>
+<p>Le damos clik en crear y tenemos nuestra workspace.</p>
+<h2 id="Usando-Codenvy"><a href="#Usando-Codenvy" class="headerlink" title="Usando Codenvy"></a>Usando Codenvy</h2><p>La interfaz del workspace no es muy distinta a un IDE normal y corriente
+por lo que si ya estas familiarizado no tendrás ningún problema.</p>
+<p><img src="https://preview.ibb.co/gqK2aQ/ide_workspace_codenvy.png" alt="ide-workspace-codenvy"></p>
+<p>Solamente hace falta probarlo y para ver que más cosas se pueden hacer, hasta
+ahora eh probado con Java algunos programas simples en consola y un jsf
+que hay de ejemplo.</p>
+<p>Espero que les haya servido, nos vemos en el siguiente post!</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="es">
+    <link itemprop="mainEntityOfPage" href="https://blog.esturafd.me/2017/07/20/2017-07-20-docker-cygwin/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/revolution-desu.jpg">
+      <meta itemprop="name" content="esturafd">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="El stream del este">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/2017/07/20/2017-07-20-docker-cygwin/" class="post-title-link" itemprop="url">[Instalación] Docker Toolbox en Cygwin</a>
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">Publicado el</span>
+
+              <time title="Creado por: 2017-07-20 14:23:44" itemprop="dateCreated datePublished" datetime="2017-07-20T14:23:44-06:00">2017-07-20</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">Editado el</span>
+                <time title="Modificado por: 2019-11-18 11:56:29" itemprop="dateModified" datetime="2019-11-18T11:56:29-06:00">2019-11-18</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">En</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/docker/" itemprop="url" rel="index">
+                    <span itemprop="name">docker</span>
+                  </a>
+                </span>
+                  , 
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/docker/cygwin/" itemprop="url" rel="index">
+                    <span itemprop="name">cygwin</span>
+                  </a>
+                </span>
+                  , 
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/docker/cygwin/wimpty/" itemprop="url" rel="index">
+                    <span itemprop="name">wimpty</span>
+                  </a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>Bueno, es el segundo post, no es mi intención solo hablar solo de Cygwin pero
+es una de las herramientas que más uso, también estoy consciente que Windows
+ya tiene una solución propia y puede ejecutar bash, pero tengo que formatear mi
+PC y después de eso lo probare, mientras tanto sigamos.</p>
+<h2 id="¿-Que-es-Docker"><a href="#¿-Que-es-Docker" class="headerlink" title="¿ Que es Docker ?"></a>¿ Que es Docker ?</h2><p>Docker es una plataforma de contenedores para aplicaciones, que empaqueta
+una aplicación y sus requisitos para que la ejecución no dependa de las
+configuraciones del ambiente si no solo del contenedor, además de varias
+otras funcionalidades, para más información
+<a href="https://www.docker.com/what-docker" target="_blank" rel="noopener">aquí</a>.</p>
+<h2 id="¿-Que-es-Cygwin"><a href="#¿-Que-es-Cygwin" class="headerlink" title="¿ Que es Cygwin ?"></a>¿ Que es Cygwin ?</h2><p>Cygwin es una larga colección de herramientas GNU y Open Source, las cuales
+proveen una funcionalidad similar a una distribución Linux en Windows, para
+más información <a href="https://www.cygwin.com" target="_blank" rel="noopener">aquí</a>.</p>
+<h2 id="¿-Por-que-Cygwin"><a href="#¿-Por-que-Cygwin" class="headerlink" title="¿ Por que Cygwin ?"></a>¿ Por que Cygwin ?</h2><p>Docker ya viene con una herramienta similar a Cygwin para ejecutarlo, pero
+dado que yo ya tenía Cygwin, además de una serie de configuraciones
+personalizadas, la idea es poder seguir usando Cygwin.</p>
+<h2 id="Instalacion"><a href="#Instalacion" class="headerlink" title="Instalación"></a>Instalación</h2><p>Lo primero sería descargar
+<a href="https://download.docker.com/win/stable/DockerToolbox.exe" target="_blank" rel="noopener">Docker Toolbox</a>,
+si buscas en la página oficial te aparecerá la versión CE, pero esta requiere
+un Windows Profesional o Enterprise.</p>
+<p>La instalación del propio Toolbox no es distinta a una instalación en
+Windows, más información <a href="https://docs.docker.com/toolbox/toolbox_install_windows/#step-2-install-docker-toolbox" target="_blank" rel="noopener">aqui</a>.</p>
+<p>Si ejecutas el comando docker antes de ejecutar Docker Quickstart Terminal, puedes ver que hay un problema</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">$ docker version</span><br><span class="line">Client:</span><br><span class="line"> Version:      17.05.0-ce</span><br><span class="line"> API version:  1.29</span><br><span class="line"> Go version:   go1.7.5</span><br><span class="line"> Git commit:   89658be</span><br><span class="line"> Built:        Fri May  5 15:36:11 2017</span><br><span class="line"> OS/Arch:      windows/amd64</span><br><span class="line">error during connect: Get http://%2F%2F.%2Fpipe%2Fdocker_engine/v1.29/version:</span><br><span class="line">open //./pipe/docker_engine: El sistema no puede encontrar el archivo especificado.</span><br><span class="line">In the default daemon configuration on Windows, the docker client must be run</span><br><span class="line">elevated to connect. This error may also indicate that the docker daemon is not running.</span><br></pre></td></tr></table></figure>
+
+<p>Cuando yo instale Docker, y al ejecutar Docker Quickstart Terminal me dio
+el primer error pero este se solucionó reiniciando el PC, la ejecución del
+Quickstart es para crear la máquina virtual donde se crearan los contenedores
+pero como la idea es usar Cygwin creémosla ahí, aunque se puede crear con
+la herramienta que te da Docker.</p>
+<p>el comando <code>docker-machine</code> sirve para administrar la máquina virtual,
+la cual por defecto se crea con el nombre “default”, si la quisiéramos
+crear con ese nombre ejecutamos:</p>
+<p><code>docker-machine create default</code></p>
+<p>una ves creada se necesita que se creen las variables que docker usa para
+ejecutarse, las cuales se pueden crear ejecutando</p>
+<p><code>eval $(docker-machine env default)</code></p>
+<h2 id="Configuracion"><a href="#Configuracion" class="headerlink" title="Configuración"></a>Configuración</h2><p>Una de las primeras cosas que podemos hacer es ejecutar <code>docker version</code>
+en cygwin, y ya se ejecutara correctamente, el problema es que si queremos
+crear un contenedor o descargar una imagen de los repositorios oficiales
+se va quedar ejecutando pero el comando no termina, este problema es
+ocasionado debido a que Mimtty la consola que ejecuta cygwin es de tipo
+TTY y el comando docker pide una de tipo PTY, encontré un poco de
+documentación sobre este error pero en su mayoría recomendaba usar la
+herramienta oficial.</p>
+<p>Finalmente encontré un programa llamado wimpty el cual debe solucionar el
+problema, y un instalador convenientemente fácil “<a href="https://github.com/tiangolo/babun-docker" target="_blank" rel="noopener">babun-docker</a>“,
+pero esta no me funciono, y me toco que compilar <a href="https://github.com/rprichard/winpty" target="_blank" rel="noopener">wimpty</a>,
+para eso descargamos el <a href="https://github.com/rprichard/winpty/archive/master.zip" target="_blank" rel="noopener">zip</a> y lo descomprimimos o lo clonamos por git</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">git clone https://github.com/rprichard/winpty.git</span><br><span class="line">mv wimpty .wimpty</span><br><span class="line">cd .wimpty</span><br><span class="line">./configure</span><br><span class="line">make</span><br><span class="line">make install</span><br></pre></td></tr></table></figure>
+
+<p>finalmente añadimos el uso de wimpty en el archivo <code>.bash_profile</code> que
+está en <code>$HOME</code> y listo</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"># docker</span><br><span class="line">eval $(docker-machine env default)</span><br><span class="line">alias docker=&apos;winpty docker&apos;</span><br><span class="line">export PATH=$&#123;PATH&#125;:$&#123;HOME&#125;/.winpty</span><br></pre></td></tr></table></figure>
+
+<p>Espero que les ayude y nos vemos en el próximo post!</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="es">
+    <link itemprop="mainEntityOfPage" href="https://blog.esturafd.me/2017/06/11/2017-06-11-jekyll-cygwin/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/revolution-desu.jpg">
+      <meta itemprop="name" content="esturafd">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="El stream del este">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/2017/06/11/2017-06-11-jekyll-cygwin/" class="post-title-link" itemprop="url">[Instalación] Jekyll en Cygwin</a>
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">Publicado el</span>
+
+              <time title="Creado por: 2017-06-11 16:23:44" itemprop="dateCreated datePublished" datetime="2017-06-11T16:23:44-06:00">2017-06-11</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">Editado el</span>
+                <time title="Modificado por: 2019-11-18 11:56:29" itemprop="dateModified" datetime="2019-11-18T11:56:29-06:00">2019-11-18</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">En</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/jekyll/" itemprop="url" rel="index">
+                    <span itemprop="name">jekyll</span>
+                  </a>
+                </span>
+                  , 
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/jekyll/cygwin/" itemprop="url" rel="index">
+                    <span itemprop="name">cygwin</span>
+                  </a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>Desde hace un tiempo que quería empezar a escribir un blog, para documentar
+algunas cosas que hago y talves compartir algunas soluciones que he encontrado,
+ya saben de esas que te quiebras la cabeza tratando de solucionar y cuando
+terminas no tienes idea de lo que hiciste, bueno problema solucionado.</p>
+<h2 id="¿Por-que-Cygwin"><a href="#¿Por-que-Cygwin" class="headerlink" title="¿Por qué Cygwin?"></a>¿Por qué Cygwin?</h2><p>Ya llevo un tiempo queriendo ser linuxero, pero por una u otra razón no
+he podido hacer que este sea mi sistema operativo principal, en el trabajo
+uso Windows, como muchos y mi computadora personal de una forma u otra
+acaba descompuesta o con algún otro inconveniente, por lo que no he podido
+al pie de la letra ser linuxero. A pesar de esto, decidí instalar lo más
+cercano a esto en Windows, Cygwin, y esto sumado a que trabajo con servidores
+linux, quiero pensar que en mi interior tengo algo de linuxero.</p>
+<h2 id="¿Que-es-Jekyll"><a href="#¿Que-es-Jekyll" class="headerlink" title="¿Que es Jekyll?"></a>¿Que es Jekyll?</h2><p>Jekyll es un simple generador de sitios estáticos. Es un motor de análisis
+sintetizado como una gema de ruby que se utiliza para construir sitios web
+estáticos a partir de componentes dinámicos como plantillas, código Liquid,
+Markdown, etc.</p>
+<h2 id="Instalacion"><a href="#Instalacion" class="headerlink" title="Instalación"></a>Instalación</h2><p>Me hubiera gustado documentar cada uno de los pasos que hice pero esto lo
+estoy escribiendo ya un tiempo después, así que vamos con un resumen:</p>
+<p>Lo primero es instalar las dependencias necesarias del repositorio de Cygwin,
+instalar las que les falten:</p>
+<ul>
+<li>libffi4</li>
+<li>libffi-devel</li>
+<li>ruby</li>
+<li>ruby-bundler</li>
+<li>ruby-devel</li>
+<li>ruby-bigdecimal</li>
+</ul>
+<p>ruby-bigdecimal lo termine instalando con gem, pero ustedes pueden hacerlo por
+cualquiera de los dos, en teoria funciona igual.</p>
+<p><img src="https://image.ibb.co/j1gbDF/cygwin_intall_ruby.png" alt="cygwin-intall-ruby"></p>
+<p>Comprobamos que esté instalado:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">$ ruby --version</span><br><span class="line">ruby 2.3.3p222 (2016-11-21 revision 56859) [x86_64-cygwin]</span><br><span class="line"></span><br><span class="line">$ gem --version</span><br><span class="line">2.6.11</span><br><span class="line"></span><br><span class="line">$ bundler --version</span><br><span class="line">Bundler version 1.15.1</span><br></pre></td></tr></table></figure>
+
+<p>Luego de esto instale la ultima dependencia por medio del comando gem, pero si
+la instalaron en el paso anterior, no es necesario:</p>
+<p><code>$ gem install bigdecimal</code></p>
+<p>Instalamos Jekyll:</p>
+<p><code>$ gem install jekyll</code></p>
+<p>Después de esto me topé con el problema que no funcionaba el comando jekyll,
+pero revisando la ruta donde realicé la instalación noté una carpeta bin, la
+cual no estaba con anterioridad, aquí estaban los ejecutables de las gemas
+instaladas, así que me puse a ver si estas ya estaban en la carpeta de
+binarios y los que no, los moví.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">$ cd bin</span><br><span class="line">$ ls -l</span><br><span class="line">total 13</span><br><span class="line">-rwxr-xr-x 1 usuario usuario 484 jun. 10 21:51 bundle</span><br><span class="line">-rwxr-xr-x 1 usuario usuario 485 jun. 10 21:51 bundler</span><br><span class="line">-rwxr-xr-x 1 usuario usuario 482 jun. 10 22:40 jekyll</span><br><span class="line">-rwxr-xr-x 1 usuario usuario 488 jun. 10 22:14 kramdown</span><br><span class="line">-rwxr-xr-x 1 usuario usuario 482 jun. 10 22:14 listen</span><br><span class="line">-rwxr-xr-x 1 usuario usuario 476 jun. 10 21:42 rake</span><br><span class="line">-rwxr-xr-x 1 usuario usuario 476 jun. 10 21:42 rdoc</span><br><span class="line">-rwxr-xr-x 1 usuario usuario 474 jun. 10 21:42 ri</span><br><span class="line">-rwxr-xr-x 1 usuario usuario 481 jun. 10 22:14 rougify</span><br><span class="line">-rwxr-xr-x 1 usuario usuario 491 jun. 10 22:14 safe_yaml</span><br><span class="line">-rwxr-xr-x 1 usuario usuario 476 jun. 10 21:27 sass</span><br><span class="line">-rwxr-xr-x 1 usuario usuario 484 jun. 10 21:27 sass-convert</span><br><span class="line">-rwxr-xr-x 1 usuario usuario 476 jun. 10 21:27 scss</span><br><span class="line"></span><br><span class="line">$ for x in $(ls --color=never); do which $x; done</span><br></pre></td></tr></table></figure>
+
+<p>Por lo que solo queda moverlos, y si deseas hacer un backup</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cp -r bin/ Backups/bingem/</span><br><span class="line">mv bin/jekyll /usr/bin/</span><br></pre></td></tr></table></figure>
+
+<p>Y estamos listos para una prueba:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">jekyll new blog-asombroso</span><br><span class="line">cd blog-asombroso</span><br><span class="line">jekyll serv</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://image.ibb.co/b33Cna/jekyll_serve.png" alt="jekyll-serve"></p>
+<p>Nos vemos en el próximo post!</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+  </div>
+
+  
+
+
+
+          </div>
+          
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          Tabla de contenidos
+        </li>
+        <li class="sidebar-nav-overview">
+          Inicio
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <img class="site-author-image" itemprop="image" alt="esturafd"
+    src="/images/revolution-desu.jpg">
+  <p class="site-author-name" itemprop="name">esturafd</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">5</span>
+          <span class="site-state-item-name">entradas</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+        <span class="site-state-item-count">16</span>
+        <span class="site-state-item-name">categorías</span>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://github.com/esturafd" title="GitHub &amp;rarr; https:&#x2F;&#x2F;github.com&#x2F;esturafd" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i></a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://twitter.com/esturafd" title="Twitter &amp;rarr; https:&#x2F;&#x2F;twitter.com&#x2F;esturafd" rel="noopener" target="_blank"><i class="fa fa-fw fa-twitter"></i></a>
+      </span>
+  </div>
+  <div class="cc-license motion-element" itemprop="license">
+    <a href="https://creativecommons.org/licenses/by-sa/4.0/es" class="cc-opacity" rel="noopener" target="_blank"><img src="/images/cc-by-sa.svg" alt="Creative Commons"></a>
+  </div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">esturafd</span>
+</div>
+  <div class="powered-by">Creado mediante <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> v4.0.0
+  </div>
+  <span class="post-meta-divider">|</span>
+  <div class="theme-info">Tema – <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> v7.4.2
+  </div>
+
+        
+
+
+
+
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+<script src="/js/utils.js"></script><script src="/js/motion.js"></script>
+<script src="/js/schemes/pisces.js"></script>
+<script src="/js/next-boot.js"></script>
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+
+</body>
+</html>
